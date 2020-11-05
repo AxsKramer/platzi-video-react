@@ -27,7 +27,7 @@ module.exports = {
         },
       },
       {
-        test: /\.(s*)css$/,
+        test: /\.((s*)css|sass)$/,
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
@@ -48,6 +48,10 @@ module.exports = {
         ],
       },
     ],
+  },
+  devServer:{
+    //Para trabajar con las rutas con react-router
+    historyApiFallback: true,
   },
   plugins: [
     new HtmlWebpackPlugin({

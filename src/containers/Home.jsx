@@ -1,11 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 import '../assets/styles/App.scss';
-import Header from '../components/Header';
 import Search from '../components/Search';
 import Categories from '../components/Categories';
 import Carousel from '../components/Carousel';
 import CarouselItem from '../components/CarouselItem';
-import Footer from '../components/Footer';
 
 const getData = async () => {
   const response = await fetch('http://localhost:3000/initialState');
@@ -13,7 +11,7 @@ const getData = async () => {
   return data;
 };
 
-const App = () => {
+const Home = () => {
 
   const [videos, setVideos] = useState([]);
 
@@ -23,8 +21,7 @@ const App = () => {
   }, []);
 
   return (
-    <div className='App'>
-      <Header />
+    <Fragment>
       <Search />
       {
         !videos.mylist ?
@@ -53,9 +50,8 @@ const App = () => {
           }
         </Carousel>
       </Categories>
-      <Footer />
-    </div>
+    </Fragment>
   );
 };
 
-export default App;
+export default Home;

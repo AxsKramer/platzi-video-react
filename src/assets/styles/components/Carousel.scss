@@ -9,15 +9,17 @@
     transition: 450ms transform;
     font-size: 0;
     white-space: nowrap;
-    margin: 70px 0px;
+    margin: 6rem 0px;
     padding-bottom: 10px;
+    padding-top: 2rem;
   }
   
   .carousel__container:hover .carousel-item {
     opacity: 0.3;
+    transform: scale(.8);
   }
   
   .carousel__container:hover .carousel-item:hover {
-    transform: scale(1.5);
+    transform: scale(1.3);
     opacity: 1;
   }
