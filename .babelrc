@@ -1,16 +1,18 @@
 {
-    "presets": [
-        // to work with ES5 and ES6
-        [
-            //This confihurations works to use aync await
-            "@babel/preset-env",
-            {
-              "targets": {
-                "esmodules": true
-              }
-            } 
-          ],
-        // to work with jsx and react
-        "@babel/preset-react"
-    ]
+  "presets": [
+    // to work with ES5 and ES6
+    [
+        //This confihurations works to use aync await
+        "@babel/preset-env",
+        {
+          "targets": {
+            "esmodules": true
+          }
+        } 
+      ],
+    // to work with jsx and react
+    "@babel/preset-react"
+  ],
+  "plugins": ["react-hot-loader/babel"  ]
+
 }
